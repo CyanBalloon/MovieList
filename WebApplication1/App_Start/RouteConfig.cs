@@ -20,8 +20,8 @@ namespace MvcMovie
             );
 
             routes.MapRoute(
-                name:"Hello",
-                url:"{controller}/{action}/{name}/{id}"
+                name: "Hello",
+                url: "{controller}/{action}/{name}/{id}"
                 );
         }
     }
