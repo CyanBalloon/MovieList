@@ -1,0 +1,10 @@
+﻿select{
+    -webkit-border-radius: 0px;
+    -webkit-appearance: none;
+    height: 26px;
+    width: 225px;
+}
+
+input{
+    width: 225px;
+}

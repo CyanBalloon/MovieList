@@ -15,24 +15,23 @@ namespace MvcMovie.Migrations
 
         protected override void Seed(MvcMovie.Models.MovieDBContext context)
         {
-            context.Movies.AddOrUpdate(i => i.Title,
-                new Movie
-                {
-                    Title = "American Psycho",
-                    ReleaseDate = DateTime.Parse("2000-01-01"),
-                    Genre = "Thriller",
-                    Rating = 10,
-                    Price = 10M
-                },
+            context.Genres.AddOrUpdate(g => g.Name,
+new Genre { Name = "Science-Fiction" });
+            context.SaveChanges();
+            context.Movies.AddOrUpdate(m => m.Title,
+                new Movie { Title = "American Psycho", Rating = 10, Price = 10, Genre = context.Genres.FirstOrDefault(), ReleaseYear = 2000, GenreID = context.Genres.FirstOrDefault().ID });
+            //  This method will be called after migrating to the latest version.
 
-                new Movie
-                {
-                    Title = "The Matrix",
-                    ReleaseDate = DateTime.Parse("1999-3-13"),
-                    Genre = "Science-Fiction",
-                    Rating = 10,
-                    Price = 10M
-                });
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }

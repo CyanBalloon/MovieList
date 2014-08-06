@@ -52,6 +52,6 @@ C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\bin\Microsoft.Ow
 C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\WebApplication1.pdb
-C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\MvcMovie.Migrations.Initial.resources
+C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\MvcMovie.csprojResolveAssemblyReference.cache
+C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\MvcMovie.Migrations.init.resources
 C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\MvcMovie.csproj.GenerateResource.Cache
-C:\Users\CyanBalloon\Dropbox\Projects\MovieList\WebApplication1\obj\Debug\MvcMovie.Migrations.Rating.resources

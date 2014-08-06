@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace MvcMovie.Models
 {
@@ -10,12 +12,14 @@ namespace MvcMovie.Models
 
         public string Title { get; set; }
 
-        [Display(Name="Release Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
-        public DateTime ReleaseDate { get; set; }
+        public int ReleaseYear { get; set; }
 
-        public string Genre { get; set; }
+        [Display(Name="Genre")]
+        public int GenreID { get; set; }
+
+        [ForeignKey("GenreID")]
+        [Display(Name = "Genre")]
+        public Genre Genre { get; set; }
 
         public decimal Price { get; set; }
 
@@ -25,5 +29,7 @@ namespace MvcMovie.Models
     public class MovieDBContext : DbContext
     {
         public DbSet<Movie> Movies { get; set; }
+
+        public System.Data.Entity.DbSet<MvcMovie.Models.Genre> Genres { get; set; }
     }
 }
