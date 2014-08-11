@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MvcMovie.Models.omdbMovie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section specificScripts {
+    @Scripts.Render("~/Script/omdbApi")
+    @Scripts.Render("~/Script/BrowseMovies/Index")
+}
+
+<h2>Index</h2>
+
+@foreach (var item in Model)
+{
+    <div class="movie-container-small" id="moviecontainer-@Html.DisplayFor(modelItem => item.id)">
+        <img src="@Html.DisplayFor(modelItem => item.poster_path)" />
+        <div id="description-@Html.DisplayFor(modelItem => item.id)" class="movie-container-small-description"></div>
+        <!--
+        <table class="movie-table">
+            <tr>
+                <td rowspan="5">
+                    <img src="@Html.DisplayFor(modelItem => item.poster_path)" />
+                </td>
+            </tr>
+            <tr>
+                <td class="movie-table-td-title">
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.release_date)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.popularity)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vote_average)
+                </td>
+            </tr>
+        </table>
+        -->
+    </div>
+}
+
+<script>
+
+</script>

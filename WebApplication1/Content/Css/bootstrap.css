@@ -275,7 +275,7 @@ table {
     page-break-after: avoid;
   }
   .navbar {
-    display: none;
+    display: none;    
   }
   .table td,
   .table th {
@@ -4028,6 +4028,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  box-shadow: 1px 1px 10px #000;
 }
 
 .navbar:before,

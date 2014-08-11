@@ -23,9 +23,15 @@ namespace MvcMovie
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/Script/omdbApi").Include(
+                        "~/Scripts/omdbClasses/omdbAPIClass.js"));
+
+            bundles.Add(new ScriptBundle("~/Script/BrowseMovies/Index").Include(
+                        "~/Scripts/BrowseMovies/Index.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/Css/bootstrap.css",
+                      "~/Content/Css/site.css"));
 
             bundles.Add(new StyleBundle("~/Movies/css").Include(
                       "~/Content/Movies_Css.css"));
